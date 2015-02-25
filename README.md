@@ -1,19 +1,24 @@
-# drive-variables
-Meteor package grabs variables from spreadsheet. Your apps settings and language translations will fly.
 
-# Youiest's google drive language package
+Meteor package grabs variables from spreadsheet. Your apps settings and language translations will fly.
+---------
+
+# youiest-driven is Youiest's google drive language package
 
 Basic useful feature list:
 
- * Fetch language from google drive
- * Web browser has it's native language instead of just English
+ * Fetch language from google drive spreadsheet
+ * Use google translate formula or enter manually if it fails.
+ * An variable can be pulled from the spreadsheet.
+
+See spreadsheet example:
+
+https://docs.google.com/spreadsheets/d/1i9RZmgLQe2CsFX0BYMQnjLyd8185gYaFsW74TRtj7RQ/edit#gid=0
+
 
 The package is available on atmosphere as well as the code is on git 
 
 ```javascript
-meteor add youiest:mypackage;
-//just incase you use mrt
-mrt add youiest:mypackage;
+meteor add youiest:driven;
 
 ```
 
@@ -25,7 +30,7 @@ Session.set("language",myLanguage);
 
 ```
 
-Use in template
+Use in template with keys from the sheet:
 
 ```html
   <button>{{lang.body.clickMe}}</button>
