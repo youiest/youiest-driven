@@ -1,16 +1,17 @@
-
-Meteor package grabs variables from spreadsheet. Your apps settings and language translations will fly.
+Meteor package grabs variables from spreadsheet. 
 ---------
+Your apps settings and language translations will fly.
 
-# youiest-driven is Youiest's google drive language package
+
+# youiest:driven language from drive spreadsheet
 
 Basic useful feature list:
 
  * Fetch language from google drive spreadsheet
- * Use google translate formula or enter manually if it fails.
+ * In drive use google translate formula or enter manually in next column if it fails.
  * An variable can be pulled from the spreadsheet.
 
-See spreadsheet example:
+See spreadsheet example for copy:
 
 https://docs.google.com/spreadsheets/d/1i9RZmgLQe2CsFX0BYMQnjLyd8185gYaFsW74TRtj7RQ/edit#gid=0
 
