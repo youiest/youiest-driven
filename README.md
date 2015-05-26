@@ -1,34 +1,28 @@
-Meteor package grabs variables from spreadsheet. 
----------
+# Meteor package grabs variables from spreadsheet.
 Your apps settings and language translations will fly.
 
-
-# youiest:driven language from drive spreadsheet
-
+# youiest:driven spreadsheet package
 Basic useful feature list:
+- Fetch text from google drive spreadsheet
+- Use google translate formula to translate
+- Manually translate where necessary. Simply add text to the next column.
+- Take any variable you wish from the spreadsheet and place it into your Meteor app.
+- Stop editing html! A timer updates the text in your Meteor app from the spreadsheet.
 
- * Fetch language from google drive spreadsheet
- * In drive use google translate formula or enter manually in next column if it fails.
- * An variable can be pulled from the spreadsheet.
-
-See spreadsheet example for copy:
-
-https://docs.google.com/spreadsheets/d/1i9RZmgLQe2CsFX0BYMQnjLyd8185gYaFsW74TRtj7RQ/edit#gid=0
-
-
-The package is available on atmosphere as well as the code is on git 
+The package is available on atmosphere.
 
 ```javascript
-meteor add youiest:driven;
-
+meteor add youiest:driven
 ```
 
-By default the language is "en-us", if you want to change the language you can set 
-it by 
+Demo app running: [https://github.com/youiest/youiest-driven-demo](https://github.com/youiest/youiest-driven-demo)
+
+See spreadsheet example. [https://docs.google.com/spreadsheets/d/1i9RZmgLQe2CsFX0BYMQnjLyd8185gYaFsW74TRtj7RQ/edit#gid=0](https://docs.google.com/spreadsheets/d/1i9RZmgLQe2CsFX0BYMQnjLyd8185gYaFsW74TRtj7RQ/edit#gid=0)
+
+By default the language is "en-us". The column "en-usM" or any language code followed by a "M" is manual text for when google trainslate isn't accurate. if you want to change the language you can set it by
 
 ```javascript
 Session.set("language",myLanguage);
-
 ```
 
 Use in template with keys from the sheet:
@@ -36,11 +30,10 @@ Use in template with keys from the sheet:
 ```html
   <button>{{lang.body.clickMe}}</button>
     <p>
-      {{lang.body.button.firstMessage}} 
-      {{counter}} 
+      {{lang.body.button.firstMessage}}
+      {{counter}}
       {{lang.body.button.secondMessage}}
     </p>
-
 ```
 
 Use in template
@@ -48,24 +41,13 @@ Use in template
 ```javascript
   //on client side
     Language.get("body.secondMessage");
-    
+
     //on server side
     Language.get("body.secondMessage","en-us");
-
 ```
 
-This is [on GitHub](https://github.com/youest/somerepot) it's on atmosphere too.
-
-
+This is [on GitHub](https://github.com/youest/somerepot) and [on atmosphere](https://atmospherejs.com/youiest/driven) too.
 
 Todo!
-
-* guide to copy in spreadsheet
-
-### Stuff used to make this:
-
- * [marked](https://github.com/chjj) for Markdown parsing
- * [CodeMirror](http://codemirror.net/) for the awesome syntax-highlighted editor
- * [highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in output code blocks
- * [js-deflate](https://github.com/dankogai/js-deflate) for gzipping of data to make it fit in URLs
-
+- guide to copy in spreadsheet
+- tests to show each step from timer to text on page
